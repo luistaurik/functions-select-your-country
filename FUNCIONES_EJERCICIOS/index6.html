@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quinto ejemplo</title>
+</head>
+<body>
+    
+    <img id="img-1" src="http://placekitten.com/g/300/300" alt="" onclick="agregarBordes('img-1')">
+    <img id="img-2" src="http://placekitten.com/g/300/300" alt="" onclick="agregarBordes('img-2')">
+    <img id="img-3" src="http://placekitten.com/g/300/300" alt="" onclick="agregarBordes('img-3')">
+
+    
+    <label for="lista">Selecciona color para borde: </label>
+    <select id="colores" type="text" name="lista" onChange="colores()">
+        <option value="yellow">Yellow</option>
+        <option value="blue">Blue</option>
+        <option value="red">Red</option>
+    </select>
+
+    <script>
+
+        /* Creamos la función que se reutiliza para 3 posibles situaciones */
+        function agregarBordes(elementId) {
+            elemento = document.querySelector('#' + elementId);
+            elemento.style.border = "dashed 3px "+ color; // al ser global puedo usarla la variable
+        }
+
+        function colores() {
+            let ele1 = document.querySelector("#colores"); // alcance solo en la funcion
+            color = ele1.value; // alcance global de esta variable
+            console.log("Valor color seleccionado: ",color);
+            return color; // valor retornado de la funcion
+        }
+        
+        
+
+    </script>
+
+
+</body>
+</html>

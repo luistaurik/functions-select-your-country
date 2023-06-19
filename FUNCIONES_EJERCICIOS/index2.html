@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segundo Ejemplo Funciones</title>
+</head>
+<body>
+
+    <select id="colores" type="text" onChange="colores()">
+        <option>Blue</option>
+        <option>Black</option>
+        <option>Red</option>
+    </select>
+
+
+    <!-- modificar el script para que permita pintar el body de tres colores distintos -->
+    <script >
+            function pintar(color) {
+                elemento = document.querySelector("body");
+                elemento.style.backgroundColor = color;
+            }
+
+            function colores() {
+                colorElegido = document.querySelector("#colores").value;
+                pintar(colorElegido);
+
+            }
+            
+            
+
+    </script>
+</body>
+</html>

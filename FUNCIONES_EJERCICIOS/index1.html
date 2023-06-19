@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer Ejemplo Funciones</title>
+</head>
+<body>
+    <script >
+            function pintar_negro(color) {
+                elemento = document.querySelector("body");
+                elemento.style.backgroundColor = color;
+            }
+            pintar_negro("black");
+    </script>
+</body>
+</html>
+
+<!-- 
+Tip importante: 
+Estas dos expresiones significan lo mismo:
+1. Llamamos a la función con el argumento "black"
+2. Llamamos a la función y le pasamos el valor black
+El término “argumentos” y “parámetros” es típicamente confundido en los primeros pasos de un
+desarrollador, su diferencia es el momento en el que se escriben, cuando estamos definiendo
+una función, el término que ocupamos es parámetros, y cuando estamos ejecutando una
+función, los valores que asignados entre los paréntesis se conocen como argumentos. -->

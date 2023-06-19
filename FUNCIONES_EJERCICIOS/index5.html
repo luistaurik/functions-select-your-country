@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quinto Ejemplo</title>
+</head>
+<style>
+     body {
+         background-color: white ;
+     }
+
+</style>
+<body >
+
+    
+    <script>
+
+       let colorElegido;
+       let elemento = document.querySelector("body")
+       
+       // funcion con multiples parametros
+        function MultiplesParametros(par1, par2, par3)
+        {
+        console.log(par2)
+        }
+
+        MultiplesParametros(3, 2, 1) // los que se envian se llaman argumentos
+        
+        /* Tip: Al llamar a la función tenemos que pasar los valores en el mismo orden que están definidos los parámetros. */
+
+        function MultiplesParametros1(par1, par2=2, par3=2)
+        {
+            console.log(par2+par3)
+        }
+
+        MultiplesParametros1(3)
+
+        function pintar(color = "black") {
+            alert("Color seleccionado: "+color);
+            elemento.style.backgroundColor = color
+        }
+
+        // funciones con parametros con valores por defecto
+        colorElegido = Number(prompt("1. Color por defecto  2. Blue"));
+
+        console.log("Color elegido " + colorElegido);
+        // uso de operador ternario 
+        (colorElegido == 1) ? pintar() : pintar("blue");
+
+    </script>
+
+
+</body>
+</html>
